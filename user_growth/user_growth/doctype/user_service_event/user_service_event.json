@@ -1,0 +1,108 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "hash",
+  "creation": "2026-05-25 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "user_id",
+    "event_type",
+    "event_date",
+    "service_name",
+    "region",
+    "plan_tier",
+    "mrr_delta",
+    "is_mock",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "user_id",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "用户ID",
+      "reqd": 1,
+      "search_index": 1
+    },
+    {
+      "fieldname": "event_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "事件类型",
+      "options": "开通\n流失",
+      "reqd": 1
+    },
+    {
+      "fieldname": "event_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "事件日期",
+      "reqd": 1,
+      "search_index": 1
+    },
+    {
+      "fieldname": "service_name",
+      "fieldtype": "Select",
+      "label": "服务名称",
+      "options": "标准版\n成长版\n企业版",
+      "reqd": 1
+    },
+    {
+      "fieldname": "region",
+      "fieldtype": "Select",
+      "label": "区域",
+      "options": "华北\n华南\n华东\n西部",
+      "reqd": 1
+    },
+    {
+      "fieldname": "plan_tier",
+      "fieldtype": "Select",
+      "label": "套餐层级",
+      "options": "免费\n基础\n专业\n企业",
+      "reqd": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "mrr_delta",
+      "fieldtype": "Currency",
+      "label": "MRR变动"
+    },
+    {
+      "default": "0",
+      "fieldname": "is_mock",
+      "fieldtype": "Check",
+      "label": "是否模拟数据"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "备注"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2026-05-25 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "User Growth",
+  "name": "User Service Event",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
